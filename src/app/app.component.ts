@@ -8,16 +8,36 @@ import { Product } from './product.model';
 })
 export class AppComponent {
   title = 'app';
-  product: Product;
+  products: Product[]; // Array<Product>
 
   constructor() {
-    let newProduct = new Product(
-      'Nice Hat',
-      'A Nice Black Hat',
-      '/resorces/images/products/black-hat.jpg',
-      ['Men', 'Accessories', 'Hats'],
-      29.99
-    );
-    this.product = newProduct;
+
+    this.products = [
+      new Product(
+        'SHOES',
+        'Black Running Shoes',
+        '/resorces/images/products/black-shoes.jpg',
+        ['Men', 'Running Shoes', 'Shoes'],
+        109.99
+      ),
+      new Product(
+        'NEATtoJacket',
+        'Blue Jacket',
+        '/resorces/images/products/black-jacket.jpg',
+        ['Men', 'Apparel', 'Jackets & Vests'],
+        29.99
+      ),
+      new Product(
+        'Nice Hat',
+        'A Nice Black Hat',
+        '/resorces/images/products/black-hat.jpg',
+        ['Men', 'Accessories', 'Hats'],
+        55.99
+      ),
+    ];
+  }
+
+  productWasSelected(product: Product): void {
+    console.log('Product clicked: ', product);
   }
 }
