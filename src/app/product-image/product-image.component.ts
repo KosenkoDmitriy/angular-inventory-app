@@ -14,6 +14,7 @@ import { Product } from '../product.model';
   `,
   styleUrls: ['./product-image.component.css']
 })
+
 export class ProductImageComponent implements OnInit {
   @Input() product: Product;
   @HostBinding('attr.class') cssClass = 'ui small image';

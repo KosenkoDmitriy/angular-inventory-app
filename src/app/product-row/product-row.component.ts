@@ -4,7 +4,6 @@ import {
   HostBinding
   } from '@angular/core';
 import { Product } from '../product.model';
-import { Image } from './product-image/product-image.component'
 
 @Component({
   selector: 'product-row',
@@ -18,7 +17,6 @@ export class ProductRowComponent {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
 }
+
+
